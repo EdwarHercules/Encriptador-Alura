@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="cuerpo">
+        <section class="logo">
+            <img class="vector1" src="imagenes/Vector.png" alt="vector">
+        </section>
+        
+        <textarea id="texto1" cols="20" rows="1" placeholder="Ingrese el texto aqui"></textarea>
+        <section class="alarmas">
+            <img src="imagenes/Vector2.png" alt="Alarma" class="vector2">
+            <p class="mensaje-alarma">Solo letra minusculas y sin acentos</p>
+        </section>
+        <section class="botones">
+            <input type="submit" value="Encriptar texto" class="encriptador" onclick="cambio()">
+            <input type="submit" value="Desencriptar texto" class="desencriptador" onclick="descambio()">
+        </section>
+
+        <section id="rectangulo">
+           <div id="mostrarimagen">
+            <img src="imagenes/Muñeco.png" alt="munheco" class="munheco">
+            <p class="msj1">Ningun mensaje fue encontrado</p>
+            <p class="msj2">Ingresa el texto que desea increptar o desencrpitar</p>
+           </div>
+            <div id="mostrartexto">
+            <textarea id="texto2" cols="40" rows="5" readonly></textarea>
+            <input type="submit" value="Copiar" id="copiar">
+
+           </div>
+        </section>
+    
+    </main>
+
+    
+</body>
+<script>
+    function cambio() 
+    {
+        let guardatexto = document.getElementById("texto1").value; 
+        let encriptare = guardatexto.replace(/[e]/igm, "enter");
+        let encriptari= encriptare.replace(/[i]/igm, "imes");   
+        let encriptara = encriptari.replace(/[a]/igm, "ai");
+        let encriptaro = encriptara.replace(/[o]/igm, "ober"); 
+        let encriptar = encriptaro.replace(/[u]/igm, "uber");
+        document.getElementById("texto2").value=encriptar;
+        document.getElementById('mostrarimagen').style.display = 'none';
+        document.getElementById('mostrartexto').style.display = 'block';
+    }
+    function descambio() 
+    {
+        let guardatexto = document.getElementById("texto1").value; 
+        let encriptare = guardatexto.replace(/enter/igm, "e");
+        let encriptari= encriptare.replace(/imes/igm, "i");   
+        let encriptara = encriptari.replace(/ai/igm, "a");
+        let encriptaro = encriptara.replace(/ober/igm, "o"); 
+        let encriptar = encriptaro.replace(/uber/igm, "u");
+        document.getElementById("texto2").value=encriptar;
+    }
+    function copiartexto(texto)
+    {
+
+        const areatexto = document.createElement('textarea');
+        areatexto.value=texto;
+        areatexto.setAttribute('readonly', '');
+        areatexto.style.position='absolute';
+        areatexto.style.left='-99999px';
+        document.body.appendChild(areatexto);
+        let seleccionado = document.getSelection().rangeCount > 0? document.getSelection().getRangeAt(0) : false
+        areatexto.select();
+        document.execCommand('copy');
+        document.body.removeChild(areatexto);
+
+        if(seleccionado){
+            document.getSelection().removeAllRanges();
+            document.getSelection().addRange(seleccionado);
+        }
+    }
+    window.onload = function(){
+        document.getElementById('copiar').addEventListener('click', () => {
+            let contenido = document.getElementById('texto2').value;
+            copiartexto(contenido);
+            
+        })
+    }
+
+</script>

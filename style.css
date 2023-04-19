@@ -1,0 +1,233 @@
+.cuerpo
+{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #f3f5fc;
+}
+/*aqui inicia el vector*/
+.logo
+{
+    width: 148px;
+    height: 48px;
+}
+.vector1
+{
+    display: inline-block;
+    position: absolute;
+    height: 48px;
+    width: 31.09px;
+    left: 84px;
+    right: 1324.31px;
+    top: 40px;
+    bottom: 0%;
+}
+/*ingrese texto aqui*/
+#texto1
+{
+    position: absolute;
+    width: 577px;
+    height: 600px;
+    left: 240px;
+    top: 168px;
+    right: 623px;
+    border: none;
+    background: #f3f5fc;
+    outline: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+/*solo letras minusculas sin acentos*/
+.alarmas
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    top: 852px;
+    left: 240px;
+}
+.alarma
+{
+    top: 852px;
+    left: 240px;
+}
+.mensaje-alarma
+{
+    font-size: 12px;
+    
+    top: 852px;
+    left: 264px;
+
+
+}
+/*botones de encriptar y desencriptar*/
+.botones
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+    height: 67px;
+    padding: 0;
+    gap: 24px;
+    top: 885px;
+    left: 240px;
+}
+.encriptador
+{
+    width: 320px;
+    border-radius: 20px;
+    font-size: 20px;
+    background: #0A3871;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 1s all;
+}
+.desencriptador
+{
+    width: 320px;
+    border-radius: 20px;
+    font-size: 20px;
+    background: #D8DFE8;
+    color: #0A3871;
+    cursor: pointer;
+    transition: 1s all;
+}
+.desencriptador:hover
+{
+    transform: scale(1.1); 
+}
+.encriptador:hover
+{
+    transform: scale(1.1); 
+}
+/*disenho del rectangulo de respuesta*/
+#rectangulo
+{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    top: 40px;
+    left: 1000px;
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+}
+.munheco
+{
+    position: absolute;
+    top: 283px;
+    left: 32px;
+}
+.msj1
+{
+    position: absolute;
+    width: 336px;
+    height: 58px;
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    top: 579px;
+    left: 32px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    color: #343A40;
+
+}
+.msj2
+{
+    position: absolute;
+    width: 336px;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    top: 653px;
+    left: 32px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    
+}
+#texto2
+{
+    position: absolute;
+    width: 336px;
+    height: 760px;
+    left: 32px;
+    top: 72px;
+    border: none;
+    outline: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    user-select: all;
+}
+#copiar
+{
+    /* Button */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    flex-direction: row;
+    width: 320px;
+    height: 67px;
+    left: 32px;
+    top: 845px;
+    font-size: 26px;
+
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 1s all;
+}
+#copiar:hover
+{
+    transform: scale(1.1); 
+}
+#mostrartexto
+{
+    display: none;
+}
+#mostrarimagen
+{
+    display: block;
+}
+@media screen and (max-width:480px) {
+    body{
+        background: red;
+    }
+    
+}
