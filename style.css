@@ -1,39 +1,37 @@
 .cuerpo
 {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: #f3f5fc;
 }
-/*aqui inicia el vector*/
+/*aqui inicia el logo de Alura*/
 .logo
 {
-    width: 148px;
-    height: 48px;
+    width: 5%;
+    height: 4%;
 }
 .vector1
 {
+    
     display: inline-block;
     position: absolute;
-    height: 48px;
-    width: 31.09px;
-    left: 84px;
-    right: 1324.31px;
-    top: 40px;
-    bottom: 0%;
+    left: 5%;
+    top: 5%;
+
 }
-/*ingrese texto aqui*/
+/*ingrese texto que desea encriptar aqui*/
 #texto1
 {
     position: absolute;
-    width: 577px;
-    height: 600px;
-    left: 240px;
-    top: 168px;
-    right: 623px;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
     border: none;
-    background: #f3f5fc;
     outline: none;
+    resize: none;
+    background: #f3f5fc;
 
     font-family: 'Inter';
     font-style: normal;
@@ -42,7 +40,16 @@
     line-height: 150%;
     color: #0A3871;
 }
-/*solo letras minusculas sin acentos*/
+#texto1::placeholder{
+    color: #0A3871;
+}
+#texto1:focus,
+#texto1:active
+{
+    border: none;
+    outline: none;
+}
+/*solo letras minusculas sin acentos alerta*/
 .alarmas
 {
     position: absolute;
@@ -51,20 +58,20 @@
     align-items: center;
     padding: 0;
     gap: 8px;
-    top: 852px;
-    left: 240px;
+    top: 80%;
+    left: 12%;
 }
 .alarma
 {
-    top: 852px;
-    left: 240px;
+    top: 80%;
+    left: 12%;
 }
 .mensaje-alarma
 {
     font-size: 12px;
     
-    top: 852px;
-    left: 264px;
+    top: 80%;
+    left: 15%;
 
 
 }
@@ -74,16 +81,16 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    width: 650px;
-    height: 67px;
-    padding: 0;
-    gap: 24px;
-    top: 885px;
-    left: 240px;
+    width: 80%;
+    height: 7%;
+    padding: 1% 0;
+    gap: 2%;
+    top: 82%;
+    left: 12%;
 }
 .encriptador
 {
-    width: 320px;
+    width: 25%;
     border-radius: 20px;
     font-size: 20px;
     background: #0A3871;
@@ -93,7 +100,7 @@
 }
 .desencriptador
 {
-    width: 320px;
+    width: 25%;
     border-radius: 20px;
     font-size: 20px;
     background: #D8DFE8;
@@ -109,75 +116,77 @@
 {
     transform: scale(1.1); 
 }
-/*disenho del rectangulo de respuesta*/
-#rectangulo
+/*disenho del rectangulo de respuesta de la encriptacion*/
+.rectangulo
 {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    width: 400px;
-    height: 944px;
-    top: 40px;
-    left: 1000px;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 60%;
     background: #ffffff;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 
 }
-.munheco
+.texto-encriptado
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
     position: absolute;
-    top: 283px;
-    left: 32px;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+    right: 0%;
 }
-.msj1
+
+.texto-encriptado h2
 {
-    position: absolute;
-    width: 336px;
-    height: 58px;
+    width: 60%;
     font-family: "inter";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
     text-align: center;
-    top: 579px;
-    left: 32px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    color: #343A40;
-
+    color: #343a40;
 }
-.msj2
+.texto-encriptado p
 {
-    position: absolute;
-    width: 336px;
-    height: 48px;
-    font-family: 'Inter';
+    width: 80%;
+    font-family: "inter";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     text-align: center;
     color: #495057;
-    top: 653px;
-    left: 32px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    
+}
+.rectangulo img
+{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+    right: 0%;
+    left: 10.4%;
 }
 #texto2
 {
     position: absolute;
-    width: 336px;
-    height: 760px;
-    left: 32px;
-    top: 72px;
+    width: 90%;
+    height: 80%;
+    top: 5%;
+    left: 5%;
     border: none;
     outline: none;
-
+    resize: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -200,10 +209,10 @@
 
     position: absolute;
     flex-direction: row;
-    width: 320px;
-    height: 67px;
-    left: 32px;
-    top: 845px;
+    width: 60%;
+    height: 7%;
+    left: 20%;
+    top: 90%;
     font-size: 26px;
 
     /* Dark blue/dark-blue-300 */
@@ -225,9 +234,174 @@
 {
     display: block;
 }
-@media screen and (max-width:480px) {
-    body{
-        background: red;
+/*responsive desing*/
+@media screen and (max-width:900px) {
+    .cuerpo{
+        display: flex;
+        flex-direction: row;
+    }
+    .logo{
+        width: 5%;
+        height: 5%;
+        top: 1%;
+        left: 1%;
+    }
+    .vector1{
+        width: 5%;
+        height: 5%;
+    }
+    #texto1{
+        width: 80%;
+        height: 55%;
+        left: 10%;
+        top: 10%;
+    }
+    .alarmas{
+        width: 80%;
+        left: 10%;
+        top: 65%;
+    }
+    .mensaje-alarma{
+        font-size: 16px;
+    }
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+    .encriptador,
+    .desencriptador
+    {
+        width: 48%;
+        border-radius: 25px;
+    }
+    .encriptador:hover,.desencriptador:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .rectangulo{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+    .texto-encriptado{
+        width: 100%;
+        top: 5%;
+    }
+    .munheco{
+        top: 0%;
+        display: none;
+        visibility: hidden;
+    }
+    #texto2
+    {
+        width: 89%;
+        height: 51%;
+        top: 5% ;
+    }
+    #copiar
+    {
+        width: 55%;
+        border-radius: 25px;
+        height: 30%;
+        top: 60%;
+        left: 23%;
     }
     
+}
+@media screen and (max-width:480px) {
+    .cuerpo{
+        display: flex;
+        flex-direction: row;
+    }
+    .logo{
+        width: 5%;
+        height: 5%;
+        top: 1%;
+        left: 1%;
+    }
+    .vector1{
+        width: 7%;
+        height: 5%;
+    }
+    #texto1{
+        font-size: 22px;
+        width: 80%;
+        height: 20%;
+        left: 10%;
+        top: 16%;
+    }
+    .alarmas{
+        width: 80%;
+        left: 10%;
+        top: 44%;
+        color: #495057;
+    }
+    .mensaje-alarma{
+        font-size: 10px;
+    }
+    .botones{
+        flex-direction: column;
+        width: 78%;
+        left: 10%;
+        height: 17%;
+        gap: 16px;
+        top: 48%;
+    }
+    .encriptador,
+    .desencriptador
+    {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        font-size: 12px;
+    }
+    .encriptador:hover,.desencriptador:hover{
+        margin: 0.3%;
+        padding: 1.8%;
+        width: 100%;
+    }
+    .rectangulo{
+        width: 80%;
+        height: 28%;
+        left: 10%;
+        top: 71%;
+    }
+    .texto-encriptado{
+        width: 100%;
+        top: 0%;
+        gap: 0px;
+    }
+    .msj1
+    {
+        font-size: 1.5em;
+    }
+    .munheco{
+        top: 0%;
+        display: none;
+        visibility: hidden;
+    }
+    #mostrartexto
+    {
+        height: auto;
+    }
+    #texto2
+    {
+        width: 89%;
+        height: 51%;
+        top: 5% ;
+        font-size: 12px;
+
+    }
+    #copiar
+    {
+        width: 85%;
+        border-radius: 25px;
+        height: 23%;
+        top: 68%;
+        left: 7%;
+        font-size: 15px;
+    }
 }

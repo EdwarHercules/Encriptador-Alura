@@ -5,34 +5,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="cuerpo">
-        <section class="logo">
-            <img class="vector1" src="imagenes/Vector.png" alt="vector">
-        </section>
-        
-        <textarea id="texto1" cols="20" rows="1" placeholder="Ingrese el texto aqui"></textarea>
-        <section class="alarmas">
-            <img src="imagenes/Vector2.png" alt="Alarma" class="vector2">
-            <p class="mensaje-alarma">Solo letra minusculas y sin acentos</p>
-        </section>
-        <section class="botones">
-            <input type="submit" value="Encriptar texto" class="encriptador" onclick="cambio()">
-            <input type="submit" value="Desencriptar texto" class="desencriptador" onclick="descambio()">
-        </section>
+    <main>
+        <div class="cuerpo">
+            <section class="logo">
+                <img class="vector1" src="imagenes/Vector.png" alt="vector">
+            </section>
+            
+            <textarea id="texto1" cols="20" rows="1" placeholder="Ingrese el texto aqui"></textarea>
+            <section class="alarmas">
+                <img src="imagenes/Vector2.png" alt="Alarma" class="vector2">
+                <p class="mensaje-alarma">Solo letra minusculas y sin acentos</p>
+            </section>
+            <section class="botones">
+                <input type="submit" value="Encriptar texto" class="encriptador" onclick="cambio()">
+                <input type="submit" value="Desencriptar texto" class="desencriptador" onclick="descambio()">
+            </section>
 
-        <section id="rectangulo">
-           <div id="mostrarimagen">
-            <img src="imagenes/Muñeco.png" alt="munheco" class="munheco">
-            <p class="msj1">Ningun mensaje fue encontrado</p>
-            <p class="msj2">Ingresa el texto que desea increptar o desencrpitar</p>
-           </div>
-            <div id="mostrartexto">
-            <textarea id="texto2" cols="40" rows="5" readonly></textarea>
-            <input type="submit" value="Copiar" id="copiar">
-
-           </div>
-        </section>
-    
+            <div class="rectangulo">
+                <div id="mostrarimagen">
+                    <img src="imagenes/Muñeco.png" alt="munheco" class="munheco" >
+                    <div class="texto-encriptado">    
+                        <h1 class="msj1">Ningun mensaje fue encontrado</h2>
+                        <p class="msj2">Ingresa el texto que desea increptar o desencrpitar</p>
+                    </div>
+                </div>
+                <div id="mostrartexto">
+                    <textarea id="texto2" cols="40" rows="5" readonly></textarea>
+                    <input type="submit" value="Copiar" id="copiar">
+                </div>        
+            </div>
+        </div>
     </main>
 
     
@@ -48,7 +50,8 @@
         let encriptar = encriptaro.replace(/[u]/igm, "uber");
         document.getElementById("texto2").value=encriptar;
         document.getElementById('mostrarimagen').style.display = 'none';
-        document.getElementById('mostrartexto').style.display = 'block';
+        document.getElementById('mostrartexto').style.display = 'flex';
+        document.getElementById("texto1").value="";
     }
     function descambio() 
     {
@@ -59,6 +62,7 @@
         let encriptaro = encriptara.replace(/ober/igm, "o"); 
         let encriptar = encriptaro.replace(/uber/igm, "u");
         document.getElementById("texto2").value=encriptar;
+        document.getElementById("texto1").value="";
     }
     function copiartexto(texto)
     {
